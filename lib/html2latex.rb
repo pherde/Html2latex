@@ -7,7 +7,8 @@ module Html2latex
 
 	def Html2latex.translate (text)
 		tags = {
-		'<p>' => '',
+		'<p>' => '\newline ',
+		'</p>' => '',
 		'<b>' => '\textbf{' ,  				#Negrito
 		'<i>' => '\textit{' ,		        		#Itálico
 		'<u>' => '\underline{' ,	        		#Sublinhado
