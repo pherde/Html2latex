@@ -69,7 +69,16 @@ module Html2latex
 		'&Otilde;' => 'Õ',
 		'&otilde;' => 'õ',
 		'&Ntilde;' => 'Ñ',
-		'&ntilde;' => 'ñ'
+		'&ntilde;' => 'ñ',
+		
+		#Caracteres especiais
+		'&lt;' => '<',
+		'&gt;' => '>',
+		'&ordm;' => 'º',
+		'&ordf;' => 'ª',
+		'&amp;' => '&',
+		'<sup>' => '\textsuperscript{',
+		'<sub>' => '\textsubscript{'
 
 		}
 
