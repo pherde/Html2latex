@@ -11,7 +11,9 @@ module Html2latex
 		'</p>' => '',
 		'<b>' => '\textbf{' ,  				#Negrito
 		'<i>' => '\textit{' ,		        		#Itálico
+		'<em>' => '\textit{',				#Itálico2
 		'<u>' => '\underline{' ,	        		#Sublinhado
+		'<span style="text-decoration: underline;">' => '\underline{', #Sublinhado
 		'<strong>' => '\textbf{' ,          		#Negritostrong
 		'<ul>' => '\begin{itemize}',        		#Listanaonum
 		'</ul>' => '\end{itemize}',	        		#Listanaonum
@@ -78,6 +80,7 @@ module Html2latex
 		'&ordm;' => 'º',
 		'&ordf;' => 'ª',
 		'&amp;' => '&',
+		'&nbsp;' => ' ',
 		'<sup>' => '\textsuperscript{',
 		'<sub>' => '\textsubscript{'
 
@@ -87,7 +90,7 @@ module Html2latex
 
 		#Fechamento TAGs
 		text.gsub! /<\/[a-zA-Z>]+/, '}'
-
+		
 		return text
 	end
 end
