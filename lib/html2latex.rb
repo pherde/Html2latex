@@ -87,5 +87,7 @@ module Html2latex
 
 		#Fechamento TAGs
 		text.gsub! /<\/[a-zA-Z>]+/, '}'
+
+		return text
 	end
 end
