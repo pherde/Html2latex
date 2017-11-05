@@ -11,7 +11,7 @@ module Html2latex
 		@@tags.each { |key, value| text.gsub! key, value }
 
 		#Fechamento TAGs
-		text.gsub! /<\/[a-zA-Z>]+/, '}'
+		text.gsub! /<\/[a-zA-Z1-4>]+/, '}'
 		
 		return text
 	end
@@ -41,12 +41,10 @@ module Html2latex
 		'<ol>' => '\begin{enumerate}',      		#Listanaonum
 		'</ol>' => '\end{enumerate}',	    		#Listanaonum
 		'<li>' => '\item{',			        		#itemlista
-		'<h1>' => '\section{',              		#h1 - título
-		'</h1>' => '}',                     		#fechar h1
-		'<h2>' => '\subsection{',           		#h2 - subtítulo
-		'</h2>' => '}',                      		#fechar h2
-		'<h3>' => '\subsubsection{',           		#h3 - subsubtítulo
-		'</h3>' => '}',                      		#fechar h3
+		'<h1>' => '\chapter[]{',              		#h1 - capítulo
+		'<h2>' => '\section{',              		#h2 - título
+		'<h3>' => '\subsection{',           		#h3 - subtítulo
+		'<h4>' => '\subsubsection{',           		#h4 - subsubtítulo
 		'<img src="' => '\includegraphics{',		#abrir imagem
 		'" />' => '}',                        		#fechar imagem   
 		# Acentos
