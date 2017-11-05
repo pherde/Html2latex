@@ -1,12 +1,33 @@
 require "html2latex/version"
 
 module Html2latex
+
   	def Html2latex.traduzir(text)
 		Html2latex.translate(text)
 	end
 
 	def Html2latex.translate (text)
-		tags = {
+		
+		@@tags.each { |key, value| text.gsub! key, value }
+
+		#Fechamento TAGs
+		text.gsub! /<\/[a-zA-Z>]+/, '}'
+		
+		return text
+	end
+
+	def self.tags
+		@@tags
+	end
+
+	def self.add (hash = {})
+		@@tags.merge!(hash)
+	end
+	def self.delete (key)
+		@@tags.delete(key)
+	end
+
+	@@tags = {
 		'<p>' => '\newline ',
 		'</p>' => '',
 		'<b>' => '\textbf{' ,  				#Negrito
@@ -85,12 +106,4 @@ module Html2latex
 		'<sub>' => '\textsubscript{'
 
 		}
-
-		tags.each { |key, value| text.gsub! key, value }
-
-		#Fechamento TAGs
-		text.gsub! /<\/[a-zA-Z>]+/, '}'
-		
-		return text
-	end
 end
