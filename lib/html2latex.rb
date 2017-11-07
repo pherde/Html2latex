@@ -28,7 +28,7 @@ module Html2latex
 	end
 
 	@@tags = {
-		'<p>' => '\newline ',
+		'<p>' => '\par ',
 		'</p>' => '',
 		'<b>' => '\textbf{' ,  				#Negrito
 		'<i>' => '\textit{' ,		        		#Itálico
