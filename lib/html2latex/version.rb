@@ -1,3 +1,3 @@
 module Html2latex
-  VERSION = "0.9"
+  VERSION = "1.0"
 end

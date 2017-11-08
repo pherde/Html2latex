@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Fernando E. Valle"]
   spec.email         = ["phervalle@gmail.com"]
 
-  spec.summary       = %q{Gem que traduz html para latex}
-  spec.description   = %q{Tradutor de tags html para marcações em LaTeX}
+  spec.summary       = %q{Translate HTML to Latex}
+  spec.description   = %q{This GEM translate HTML tag to Latex Code}
   spec.homepage      = ""
   spec.license       = "MIT"
 
