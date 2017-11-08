@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Translate HTML to Latex}
   spec.description   = %q{This GEM translate HTML tag to Latex Code}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/pherde/Html2latex"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'

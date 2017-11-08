@@ -33,6 +33,8 @@ Example:
 
 ```ruby
 newhash = {"<tag>" => "\latexcode{"}
+ ```
+```ruby
 Html2latex.add newhash
  ```
 
