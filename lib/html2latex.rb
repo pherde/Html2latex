@@ -11,9 +11,7 @@ module Html2latex
 		@@tags.each { |key, value| text.gsub! key, value }
 
 		#Fechamento TAGs
-		text.gsub! /<\/[a-zA-Z1-4>]+/, '}'
-		
-		return text
+		return text.gsub (/<\/[a-zA-Z1-4>]+/){ |m| @@tags.has_key?(m.gsub "/", "") ? "}" : m }
 	end
 
 	def self.tags
