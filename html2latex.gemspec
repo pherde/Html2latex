@@ -6,8 +6,8 @@ require "html2latex/version"
 Gem::Specification.new do |spec|
   spec.name          = "html2latex"
   spec.version       = Html2latex::VERSION
-  spec.authors       = ["Fernando E. Valle"]
-  spec.email         = ["phervalle@gmail.com"]
+  spec.authors       = ["Fernando E. Valle", "Alysson A. Costa"]
+  spec.email         = ["phervalle@gmail.com", "alysson.avila.costa@gmail.com"]
 
   spec.summary       = %q{Translate HTML to Latex}
   spec.description   = %q{This GEM translate HTML tag to Latex Code}
